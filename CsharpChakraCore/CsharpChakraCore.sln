@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpChakraCore", "CsharpChakraCore\CsharpChakraCore.csproj", "{04D22B74-397C-41B1-819D-86E0CC540A72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE73F311-EBE2-402B-8121-315F90901E0D}"
+	ProjectSection(SolutionItems) = preProject
+		..\bin\ChakraCore.dll = ..\bin\ChakraCore.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChakraCoreNet", "ChakraCoreNet\ChakraCoreNet.csproj", "{E369CE0B-5280-400B-BEBB-495362B74E24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04D22B74-397C-41B1-819D-86E0CC540A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D22B74-397C-41B1-819D-86E0CC540A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D22B74-397C-41B1-819D-86E0CC540A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D22B74-397C-41B1-819D-86E0CC540A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E369CE0B-5280-400B-BEBB-495362B74E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E369CE0B-5280-400B-BEBB-495362B74E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E369CE0B-5280-400B-BEBB-495362B74E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E369CE0B-5280-400B-BEBB-495362B74E24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {881D5DA1-3965-4A31-AC70-535A74FD4339}
+	EndGlobalSection
+EndGlobal
