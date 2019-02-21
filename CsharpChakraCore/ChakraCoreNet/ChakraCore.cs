@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace ChakraCoreNet
 {
@@ -333,13 +332,16 @@ namespace ChakraCoreNet
         public static extern JsErrorCode JsCreateStringUtf16(char[] content, ulong length, out JsValueRef value);
 
         [DllImport(DllName)]
-        public static extern JsErrorCode JsCopyString(JsValueRef value, out StringBuilder buffer, ulong bufferSize, out ulong length);
+        public static extern JsErrorCode JsCopyString(JsValueRef value, string buffer, ulong bufferSize, out ulong length);
 
         [DllImport(DllName)]
         public static extern JsErrorCode JsCopyString(JsValueRef value, IntPtr buffer, ulong bufferSize, out ulong length);
 
-        [DllImport(DllName)]
-        public static extern JsErrorCode JsCopyStringUtf16(JsValueRef value, int start, int length, out IntPtr buffer, out ulong written);
+        [DllImport(DllName, CharSet = CharSet.Unicode)]
+        public static extern JsErrorCode JsCopyStringUtf16(JsValueRef value, int start, int length, string buffer, out ulong written);
+
+        [DllImport(DllName, CharSet = CharSet.Unicode)]
+        public static extern JsErrorCode JsCopyStringUtf16(JsValueRef value, int start, int length, IntPtr buffer, out ulong written);
 
         [DllImport(DllName)]
         public static extern JsErrorCode JsParse(JsValueRef script, JsSourceContext sourceContext, JsValueRef sourceUrl, JsParseScriptAttributes parseAttributes, out JsValueRef result);
