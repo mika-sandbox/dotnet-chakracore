@@ -1,4 +1,4 @@
-﻿namespace ChakraCoreNet
+﻿namespace ChakraCoreNet.Native
 {
     public enum JsScriptEncodingType
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ChakraCoreNet
+namespace ChakraCoreNet.Native
 {
-    public struct JsVarDeserializerHandle
+    public struct JsModuleRecord
     {
         // ReSharper disable once UnassignedGetOnlyAutoProperty
         public IntPtr Handle { get; }

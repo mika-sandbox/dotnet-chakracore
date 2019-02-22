@@ -1,4 +1,4 @@
-﻿namespace ChakraCoreNet
+﻿namespace ChakraCoreNet.Native
 {
     public struct JsGetterSetterInterceptor
     {

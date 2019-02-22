@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ChakraCoreNet
+namespace ChakraCoreNet.Native
 {
     // from: https://github.com/Microsoft/ChakraCore/wiki/JavaScript-Runtime-%28JSRT%29-Reference
     public static class ChakraCore

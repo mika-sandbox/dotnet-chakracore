@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChakraCoreNet
+namespace ChakraCoreNet.Native
 {
     public struct JsNativeFunctionInfo
     {

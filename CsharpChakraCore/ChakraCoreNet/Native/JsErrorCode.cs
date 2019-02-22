@@ -1,4 +1,4 @@
-﻿namespace ChakraCoreNet
+﻿namespace ChakraCoreNet.Native
 {
     // https://github.com/Microsoft/ChakraCore/blob/master/lib/Jsrt/ChakraCommon.h
     public enum JsErrorCode : uint
