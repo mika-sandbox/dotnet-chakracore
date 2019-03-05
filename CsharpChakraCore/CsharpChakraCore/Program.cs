@@ -2,35 +2,30 @@
 using System.Diagnostics;
 
 using ChakraCoreNet;
+using ChakraCoreNet.Native;
 
 namespace CsharpChakraCore
 {
-    internal class Program
+    internal static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             try
             {
                 var js = "(() => { return 'Hello, World!'; })()";
+
                 var sourceContext = JsSourceContext.FromIntPtr(IntPtr.Zero);
+                using (var runtime = new ChakraRuntime())
+                {
+                    ChakraCore.JsRun(JsValueRef.FromString(js), sourceContext++, JsValueRef.FromString(""), JsParseScriptAttributes.StrictMode, out var result);
 
-                ChakraCore.JsCreateRuntime(JsRuntimeAttributes.JsRuntimeAttributeNone, null, out var runtime);
-                ChakraCore.JsCreateContext(runtime, out var context);
-                ChakraCore.JsSetCurrentContext(context);
+                    Console.WriteLine(result.ToString());
+                    Console.WriteLine(runtime.IsExecutionDisabled);
+                    Console.WriteLine(runtime.MemoryLimit);
+                    Console.WriteLine(runtime.MemoryUsage);
 
-                ChakraCore.JsRun(JsValueRef.FromString(js), sourceContext++, JsValueRef.FromString(""), JsParseScriptAttributes.JsParseScriptAttributeStrictMode, out var result);
-
-                ChakraCore.JsConvertValueToString(result, out var jsStr);
-                ChakraCore.JsCopyStringUtf16(jsStr, 0, int.MaxValue, IntPtr.Zero, out var len);
-
-                var str = new string(' ', (int) len + 1);
-                ChakraCore.JsCopyStringUtf16(jsStr, 0, (int) len + 1, str, out _);
-
-                Console.WriteLine(str);
-                Console.ReadLine();
-
-                ChakraCore.JsSetCurrentContext(context);
-                ChakraCore.JsDisposeRuntime(runtime);
+                    Console.ReadLine();
+                }
             }
             catch (Exception e)
             {
